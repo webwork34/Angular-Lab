@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 15.3.0
+before_install:
+  - npm install -g @angular/cli
+install: npm install
+branches:
+  only:
+    - maim
+deploy:
+  provider: heroku
+  app: angular-home
+  api_key:
+    secure: c4D1rssgnoM6xdA951kGQ8Tgy+OLwcxtswGXohFAPkGIZVGC5w808+/vxtX6kiksm0WE4NvJoLtdBAYPBwAahW21JGhEYLzsgUuTywUbCOdPTTXsgfRWP356uXwHx7+7R3ONg4tdHhDTVTNa2vnT/owOotB2DxBQ2aQyTb3TmYL0HF+JhbNuCfuHbJosEWelBPcJRY7IYbvBJx4dDTby5ie7UbMaFfiLdEYhD+hWt/qybfOq5ywdiqQy0e2Wdtgip5D0jWVCAR1eVUF5MOkoaC234kxVSDerdFY43XYEv6IX6L8kqk0z58Qg5HrEXhDU7Mko3785OOnAlkvhVV0W76Q5wOFYCt9zWTH86cHuoCfUbRjk2r4bPGohD9kBkRDTa2xdArKTf1u/AhqXRPsyNSw7zMmNgRTOW0/bUKiyLfiWqRJa6bse/2IqNST7CF/bTafH8jHLso+TaLgyPZL3O/NLKvfpUFb7U5VGwVvOMoihkg6FgI767aVdXwnfxjpUm5hL0YPKzEfCMjJhTmd2nTjB+yGIF519Ra8e2adcxmLzFBhC5yV+MMDhktcDeOJTvCWv/SX3oLlz4X96Fm65IpYYQJbg8AgyKrxbFgS/kTBQIVmqDvgzWh2mgTqAFc5BJ7ra/qW7lctXfNHFGqoU1GD38qzkS/asMmtOa/Uz+4M=
