@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ClickerService } from 'src/app/services/clicker.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { ClickerService } from 'src/app/services/clicker.service';
   templateUrl: './btn-field.component.html',
   styleUrls: ['./btn-field.component.scss'],
 })
-export class BtnFieldComponent implements OnInit {
+export class BtnFieldComponent implements OnInit, OnDestroy {
   constructor(public clickerService: ClickerService) {}
 
   name: string;
@@ -15,6 +15,10 @@ export class BtnFieldComponent implements OnInit {
     this.name = this.clickerService.storage('playerName')
       ? this.clickerService.storage('playerName')
       : 'Player';
+  }
+
+  ngOnDestroy() {
+    this.clickerService.newRound();
   }
 
   start() {

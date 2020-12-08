@@ -1,5 +1,5 @@
 import { ClickerService } from './../../../services/clicker.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './info-field.component.html',
   styleUrls: ['./info-field.component.scss'],
 })
-export class InfoFieldComponent implements OnInit {
+export class InfoFieldComponent implements OnInit, OnDestroy {
   constructor(public clickerService: ClickerService, private router: Router) {}
 
   form: FormGroup;
@@ -20,6 +20,10 @@ export class InfoFieldComponent implements OnInit {
 
     this.clickerService.seconds = +this.form.value.seconds;
     this.clickerService.interval = this.form.value.seconds;
+  }
+
+  ngOnDestroy() {
+    this.clickerService.newRound();
   }
 
   changeRadio(e) {
