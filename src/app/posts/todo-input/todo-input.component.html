@@ -1,8 +1,4 @@
-<input type="text" [(ngModel)]="newTask" class="new">
-<button
-  (click)="addNewTodo(newTask)"
-  class="mt20"
-  [disabled]="!newTask"
->
+<input type="text" [(ngModel)]="newTask" class="new" />
+<button (click)="addNewTodo(newTask)" class="mt20" [disabled]="!newTask">
   Add todo
 </button>

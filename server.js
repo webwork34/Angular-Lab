@@ -9,4 +9,4 @@ app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname + "/dist/HomeTasks/index.html"));
 });
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+app.listen(PORT, console.log(`Server was started on port ${PORT}...`));

@@ -1,0 +1,58 @@
+<div class="info-box p10">
+  <form [formGroup]="form">
+    <div>
+      <label for="five" class="mr15">5 sec:</label>
+      <input
+        type="radio"
+        formControlName="seconds"
+        id="five"
+        value="5"
+        (change)="changeRadio($event)"
+        [disableControl]="clickerService.isDisabled"
+      />
+    </div>
+
+    <div>
+      <label for="ten" class="mr6">10 sec:</label>
+      <input
+        type="radio"
+        formControlName="seconds"
+        id="ten"
+        value="10"
+        (change)="changeRadio($event)"
+        [disableControl]="clickerService.isDisabled"
+      />
+    </div>
+
+    <div>
+      <label for="fifteen" class="mr6">15 sec:</label>
+      <input
+        type="radio"
+        formControlName="seconds"
+        id="fifteen"
+        value="15"
+        (change)="changeRadio($event)"
+        [disableControl]="clickerService.isDisabled"
+      />
+    </div>
+  </form>
+
+  <button (click)="newRound()" [disabled]="!clickerService.isStarted">
+    NEW ROUND
+  </button>
+
+  <button (click)="changeName()" [disabled]="clickerService.isDisabled">
+    CHANGE NAME
+  </button>
+
+  <button (click)="showRecords()" [disabled]="clickerService.isDisabled">
+    SHOW RECORDS
+  </button>
+
+  <div class="text">
+    <p [ngStyle]="{ color: clickerService.isChampion ? 'green' : 'red' }">
+      {{ clickerService.gameResult }}
+    </p>
+    <p>{{ clickerService.previousRecord }}</p>
+  </div>
+</div>

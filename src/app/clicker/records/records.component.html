@@ -1,0 +1,9 @@
+<div class="container">
+  <p *ngIf="!results">No records yet.</p>
+  <ul *ngFor="let result of results">
+    <li><b>Duration:</b> {{ result.duration }}.</li>
+    <li><b>Best Result:</b> {{ result.clickCount }} clicks.</li>
+    <li><b>Champion:</b> {{ result.name }}.</li>
+  </ul>
+  <button (click)="back()">Back to game</button>
+</div>

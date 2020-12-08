@@ -1,0 +1,30 @@
+form {
+  border: 1px solid black;
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  margin: 50px auto;
+
+  input {
+    padding: 5px;
+    margin-top: 10px;
+
+    &.ng-invalid.ng-touched {
+      border: 1px solid red;
+    }
+
+    &.ng-valid.ng-touched {
+      border: 1px solid green;
+    }
+  }
+
+  .validation {
+    color: red;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}

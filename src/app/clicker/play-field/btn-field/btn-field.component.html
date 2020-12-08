@@ -1,0 +1,14 @@
+<div class="btn-box border p10">
+  <h4>Hello, {{ name }}</h4>
+  <p class="mt10">Yoy have made {{ clickerService.count }} clicks.</p>
+
+  <button
+    class="red-btn mt10"
+    (click)="start()"
+    [disabled]="clickerService.endCount"
+  >
+    {{ clickerService.nameBtn }}
+  </button>
+
+  <p class="mt10">Timer: {{ clickerService.seconds }} sec</p>
+</div>

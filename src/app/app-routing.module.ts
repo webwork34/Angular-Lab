@@ -1,3 +1,5 @@
+import { RecordsComponent } from './clicker/records/records.component';
+import { PlayFieldComponent } from './clicker/play-field/play-field.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ClickerComponent } from './clicker/clicker.component';
 import { PostsComponent } from './posts/posts.component';
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'lol', component: LolComponent },
   { path: 'posts', component: PostsComponent },
   { path: 'clicker', component: ClickerComponent },
+  { path: 'clicker/play-field', component: PlayFieldComponent },
+  { path: 'clicker/records', component: RecordsComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

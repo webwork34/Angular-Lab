@@ -4,3 +4,9 @@ export interface Todo {
   userId?: number;
   id?: number;
 }
+
+export interface IResults {
+  clickCount: number;
+  duration: string;
+  name: string;
+}

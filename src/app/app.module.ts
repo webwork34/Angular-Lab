@@ -7,11 +7,16 @@ import { LolComponent } from './lol/lol.component';
 import { PostsComponent } from './posts/posts.component';
 import { ClickerComponent } from './clicker/clicker.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoInputComponent } from './posts/todo-input/todo-input.component';
 import { TodoListComponent } from './posts/todo-list/todo-list.component';
 import { TodoDebugComponent } from './posts/todo-debug/todo-debug.component';
 import { TodoListItemComponent } from './posts/todo-list-item/todo-list-item.component';
+import { PlayFieldComponent } from './clicker/play-field/play-field.component';
+import { BtnFieldComponent } from './clicker/play-field/btn-field/btn-field.component';
+import { InfoFieldComponent } from './clicker/play-field/info-field/info-field.component';
+import { DisableControlDirective } from './disable-control.directive';
+import { RecordsComponent } from './clicker/records/records.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +29,13 @@ import { TodoListItemComponent } from './posts/todo-list-item/todo-list-item.com
     TodoListComponent,
     TodoDebugComponent,
     TodoListItemComponent,
+    PlayFieldComponent,
+    BtnFieldComponent,
+    InfoFieldComponent,
+    DisableControlDirective,
+    RecordsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

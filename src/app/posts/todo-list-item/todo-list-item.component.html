@@ -1,5 +1,5 @@
 <li>
-  {{todo.title}}
-  <input type="checkbox" [(ngModel)]="todo.completed">
-  <span *ngIf="todo.completed" class="ml5" (click)=removeTodo(todo)>X</span>
+  {{ todo.title }}
+  <input type="checkbox" [(ngModel)]="todo.completed" />
+  <span *ngIf="todo.completed" class="ml5" (click)="removeTodo(todo)">X</span>
 </li>

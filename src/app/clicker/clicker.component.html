@@ -1,1 +1,21 @@
-<p>clicker works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h2>What is your name?</h2>
+  <input type="text" formControlName="name" placeholder="Type your name..." />
+  <div
+    class="validation"
+    *ngIf="form.get('name').invalid && form.get('name').touched"
+  >
+    <small *ngIf="form.get('name').errors.required">
+      Name can't be empty.
+    </small>
+
+    <small *ngIf="form.get('name').errors.minlength">
+      Min length should be
+      {{ form.get("name").errors.minlength.requiredLength }}
+      symbols. Now length is
+      {{ form.get("name").errors.minlength.actualLength }}
+      symbols.
+    </small>
+  </div>
+  <button type="submit" [disabled]="form.invalid">Go to game</button>
+</form>

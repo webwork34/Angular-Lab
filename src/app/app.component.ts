@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'HomeTasks';
-
-  randomLink() {
-    return `/${Math.floor(Math.random() * 1000)}`;
-  }
 }
