@@ -21,11 +21,8 @@ export class ClickerService {
   previousRecord: string = '';
 
   resultsArr: IResults[];
-  resultObj: IResults = {
-    duration: '',
-    clickCount: 0,
-    name: '',
-  };
+
+  resultObj: Partial<IResults> = {};
 
   writeLS(time: string, clicks: number) {
     this.resultsArr = this.storage('results') || [];
@@ -60,7 +57,7 @@ export class ClickerService {
         this.resultObj.duration = `${this.interval} sec`;
         this.resultObj.clickCount = clicks;
         this.resultObj.name = this.storage('playerName') || 'No name';
-        this.resultsArr.push(this.resultObj);
+        this.resultsArr.push(this.resultObj as IResults);
         this.isChampion = true;
         this.gameResult = `Congratulation!!!
           You set new record for ${time} sec = ${clicks} clicks.`;
@@ -71,7 +68,7 @@ export class ClickerService {
       this.resultObj.duration = `${this.interval} sec`;
       this.resultObj.clickCount = clicks;
       this.resultObj.name = this.storage('playerName') || 'No name';
-      this.resultsArr.push(this.resultObj);
+      this.resultsArr.push(this.resultObj as IResults);
       this.isChampion = true;
       this.gameResult = `Congratulation!!!
         You set new record for ${time} sec = ${clicks} clicks.`;

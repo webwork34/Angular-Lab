@@ -1,0 +1,139 @@
+<div class="points-field" #canvas>
+  <form
+    [formGroup]="form"
+    class="figure"
+  >
+
+    <div class="points">
+      <div class="empty "></div>
+      <div class="point">POINT 1</div>
+      <div class="point">POINT 2</div>
+      <div class="point">POINT 3</div>
+      <div class="point">POINT 4</div>
+    </div>
+
+    <div class="xy">
+      <div class="x center">
+        <div class="point">X</div>
+
+        <div class="point">
+          <input
+            formControlName="p_1_x"
+            type="number"
+            placeholder="X1"
+          >
+        </div>
+
+        <div class="point">
+          <input
+          formControlName="p_2_x"
+          type="number"
+          placeholder="X2"
+        >
+        </div>
+
+        <div class="point">
+          <input
+          formControlName="p_3_x"
+          type="number"
+          placeholder="X3"
+        >
+        </div>
+
+        <div class="point">
+          <input
+          formControlName="p_4_x"
+          type="number"
+          placeholder="X4"
+        >
+        </div>
+      </div>
+
+      <div class="y center">
+        <div class="point">Y</div>
+        <div class="point">
+          <input
+            formControlName="p_1_y"
+            type="number"
+            placeholder="Y1"
+          >
+        </div>
+
+        <div class="point">
+          <input
+            formControlName="p_2_y"
+            type="number"
+            placeholder="Y2"
+          >
+        </div>
+
+        <div class="point">
+          <input
+            formControlName="p_3_y"
+            type="number"
+            placeholder="Y3"
+          >
+        </div>
+
+        <div class="point">
+          <input
+            formControlName="p_4_y"
+            type="number"
+            placeholder="Y4"
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="mt20">
+      <button
+        class="mr5"
+        [disabled]="form.invalid"
+        (click)="sayMyName()"
+
+      >
+        My name
+      </button>
+
+      <button
+        class="mr5"
+        [disabled]="form.invalid"
+        (click)="getPerimetr()"
+
+      >
+        Perimetr
+      </button>
+
+      <button
+        [disabled]="form.invalid"
+        (click)="getArea()"
+        class="mr5"
+      >
+        Area
+      </button>
+
+      <button
+        [disabled]="form.invalid"
+        (click)="draw()"
+        class="mr5"
+
+      >
+        Draw
+      </button>
+
+      <button
+        (click)="reset()"
+        class="mt5"
+      >
+        Reset
+      </button>
+    </div>
+
+  </form>
+
+  <div class="mt20">
+    <p *ngIf="quadrangleName">My name is: <b>{{quadrangleName}}</b> </p>
+    <p class="mt5" *ngIf="perimetr">My perimetr is: <b>{{perimetr}}</b> </p>
+    <p class="mt5" *ngIf="area">My area is: <b>{{area}}</b> </p>
+  </div>
+</div>

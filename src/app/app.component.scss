@@ -1,5 +1,4 @@
 .header {
-  padding: 9px;
   border-bottom: 1px solid black;
 
   .container {
@@ -11,14 +10,22 @@
       list-style: none;
 
       a {
-        padding: 10px 15px;
+        display: block;
+        padding: 10px 0;
         color: black;
         text-decoration: none;
+        text-align: center;
+        width: 115px;
       }
 
       &:hover {
         font-weight: bold;
+        background: lightgrey;
       }
     }
   }
+}
+
+.active {
+  background: lightblue;
 }

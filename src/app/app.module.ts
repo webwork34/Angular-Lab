@@ -17,6 +17,10 @@ import { BtnFieldComponent } from './clicker/play-field/btn-field/btn-field.comp
 import { InfoFieldComponent } from './clicker/play-field/info-field/info-field.component';
 import { DisableControlDirective } from './disable-control.directive';
 import { RecordsComponent } from './clicker/records/records.component';
+import { FiguresComponent } from './figures/figures.component';
+import { QuadrangleComponent } from './figures/quadrangle/quadrangle.component';
+import { TriangleComponent } from './figures/triangle/triangle.component';
+import { CircleComponent } from './figures/circle/circle.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,10 @@ import { RecordsComponent } from './clicker/records/records.component';
     InfoFieldComponent,
     DisableControlDirective,
     RecordsComponent,
+    FiguresComponent,
+    QuadrangleComponent,
+    TriangleComponent,
+    CircleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

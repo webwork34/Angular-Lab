@@ -10,10 +10,6 @@
   text-align: center;
 }
 
-.active {
-  background: lightblue;
-}
-
 button {
   padding: 5px 15px;
 }
@@ -24,4 +20,58 @@ button {
 
 .ml5 {
   margin-left: 5px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.points-field {
+  .figure {
+    display: flex;
+    flex-wrap: wrap;
+
+    .point {
+      border-top: 1px solid black;
+      padding: 5px;
+
+      &:first-of-type {
+        border-top: none;
+        height: 29px;
+      }
+    }
+
+    .points {
+      border-right: 1px solid black;
+      width: 80px;
+    }
+
+    .empty {
+      width: 74px;
+      height: 29px;
+    }
+
+    .xy {
+      display: flex;
+
+      .center {
+        width: 50%;
+        text-align: center;
+      }
+
+      .x {
+        border-right: 1px solid black;
+      }
+
+      input {
+        width: 70px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
 }

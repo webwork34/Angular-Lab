@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+
+  .links {
+    border-right: 1px solid black;
+    height: calc(100vh - 39px);
+    width: 114px;
+    text-align: center;
+
+    li {
+      list-style: none;
+
+      a {
+        padding: 10px 15px;
+        color: black;
+        text-decoration: none;
+        display: block;
+      }
+
+      &:hover {
+        font-weight: bold;
+        background: lightgrey;
+      }
+    }
+  }
+
+  .info-figure {
+    width: calc(100vw - 114px);
+    display: flex;
+
+    .data-figure {
+      padding: 20px;
+      width: 45%;
+      // border: 1px solid red;
+    }
+
+    .canvas-figure {
+      padding: 20px;
+      width: 55%;
+      // border: 1px solid green;
+
+      canvas {
+        background: lightseagreen;
+      }
+    }
+  }
+}
+
+.active-green {
+  background: lightgreen;
+}

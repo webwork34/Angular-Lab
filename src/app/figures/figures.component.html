@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="links">
+    <ul>
+      <li>
+        <a routerLink="/figures/quadrangle" routerLinkActive="active-green">Quadrangle</a>
+      </li>
+
+      <li>
+        <a routerLink="/figures/triangle" routerLinkActive="active-green">Triangle</a>
+      </li>
+
+      <li>
+        <a routerLink="/figures/circle" routerLinkActive="active-green">Circle</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="info-figure">
+    <div class="data-figure">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="canvas-figure">
+      <canvas></canvas>
+    </div>
+
+  </div>
+</div>
