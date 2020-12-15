@@ -30,14 +30,12 @@
 
     .data-figure {
       padding: 20px;
-      width: 45%;
-      // border: 1px solid red;
+      max-width: 300px;
     }
 
     .canvas-figure {
       padding: 20px;
       width: 55%;
-      // border: 1px solid green;
 
       canvas {
         background: lightseagreen;
